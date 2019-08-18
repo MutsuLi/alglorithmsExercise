@@ -1,7 +1,6 @@
-import exercise.Expression;
-import exercise.InfixtoPostfix;
-import exercise.Josephus;
-import exercise.Parentheses;
+import exercise.*;
+
+import java.util.Arrays;
 
 public class Main {
 
@@ -16,10 +15,38 @@ public class Main {
         String test = "[{()[()}]";
         System.out.println(Parentheses.isBalanced(test));
         System.out.println("-------");
-        String test2 = "(2+((3+4)*(5*6)))";
-        System.out.println((InfixtoPostfix.postFix(test2)));
+//        String test2 = "(2+((3+4)*(5*6)))";
+//        System.out.println((InfixtoPostfix.postFix(test2)));
         String[] test3 = {"3", "10"};
         Josephus.main(test3);
+        Boolean result = Palindrome.isPalindrome(1221);
+        System.out.println(result);
+        String[] test102 = {"[3,9,20,null,null,15,7]"};
+        BinaryTreeLevelTraversal.main(test102);
+        // leetcode 2
+        int[] leetcode2_1 = {2, 3, 4};
+        int[] leetcode2_2 = {5, 6, 4};
+        ListNode leetcode2_3 = ListNode.arrayToListNode(leetcode2_1);
+        ListNode leetcode2_4 = ListNode.arrayToListNode(leetcode2_2);
+        TwoNumbers leetcode2_5 = new TwoNumbers();
+        System.out.println(leetcode2_5.addTwoNumbers(leetcode2_3, leetcode2_4));
+        //leetcode 21
+        int[] leetcode21_1 = {1, 2, 3};
+        int[] leetcode21_2 = {1, 3, 4};
+        ListNode leetcode21_3 = ListNode.arrayToListNode(leetcode21_1);
+        ListNode leetcode21_4 = ListNode.arrayToListNode(leetcode21_2);
+        OrderedList leetcode21_5 = new OrderedList();
+        System.out.println(leetcode21_5.mergeTwoLists(leetcode21_3, leetcode21_4));
+        //leetcode88
+        int[] leetcode88_1 = {1, 2, 3, 0, 0, 0};
+        int[] leetcode88_2 = {2, 5, 6};
+        OrderedArray.mergeArray(leetcode88_1, 3, leetcode88_2, 3);
+        System.out.println(Arrays.toString(leetcode88_1));
+        System.out.println(subStr.IndexOf("hello", "hello", 0));
+        PermuteUnique.main(test102);
+        //leetcode35
+        int[] leetcode_25={1,2,7,10};
+        System.out.println(BinarySearch.insertSearch(leetcode_25,11));
     }
 
 

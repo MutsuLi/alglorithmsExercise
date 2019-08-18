@@ -1,7 +1,5 @@
 package exercise;
-
 import edu.princeton.cs.algs4.Stack;
-
 
 public class Expression {
     public static double calculate(String expression) {

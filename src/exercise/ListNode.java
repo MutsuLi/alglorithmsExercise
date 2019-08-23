@@ -22,7 +22,7 @@ public class ListNode {
                 nodes[i] = null;
             }
         }
-        ListNode node = null;
+        ListNode node;
         for (int i = 0; i < nodes.length-1; i++) {
             node = nodes[i];
             node.next=nodes[i+1];
@@ -42,5 +42,19 @@ public class ListNode {
     public String toString() {
         Integer[] temp = ListNodeToArray(this);
         return Arrays.toString(temp);
+    }
+
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode curr = head;
+        while (curr != null && curr.next != null) {
+            if (curr.val == curr.next.val) {
+                ListNode node = curr.next;
+                curr.next = node.next;
+                node.next = null;
+            } else {
+                curr = curr.next;
+            }
+        }
+        return head;
     }
 }

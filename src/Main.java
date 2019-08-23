@@ -47,6 +47,12 @@ public class Main {
         //leetcode35
         int[] leetcode_25={1,2,7,10};
         System.out.println(BinarySearch.insertSearch(leetcode_25,11));
+        //leetcode35
+        String leetcode_5 = "ccc";
+        System.out.println(Palindrome.longestPalindrome((leetcode_5)));
+        //leetcode53 DynamicProgamming
+        int[] leetcode_53 = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        System.out.println(DynamicProgamming.maxSubArray((leetcode_53)));
     }
 
 

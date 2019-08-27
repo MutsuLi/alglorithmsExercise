@@ -1,6 +1,8 @@
+import com.sun.source.tree.BinaryTree;
 import exercise.*;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -12,8 +14,8 @@ public class Main {
         String expression2 = "( 12 + ( ( 8 / 4 ) * ( 9 - 5 ) ) )";
         double cal2 = Expression.calculate(expression2);
         System.out.println(cal2);
-        String test = "[{()[()}]";
-        System.out.println(Parentheses.isBalanced(test));
+        String test = "[{()()}]";
+        System.out.println(Parentheses.isValid(test));
         System.out.println("-------");
 //        String test2 = "(2+((3+4)*(5*6)))";
 //        System.out.println((InfixtoPostfix.postFix(test2)));
@@ -53,6 +55,25 @@ public class Main {
         //leetcode53 DynamicProgamming
         int[] leetcode_53 = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
         System.out.println(DynamicProgamming.maxSubArray((leetcode_53)));
+        //leetcode67
+        String test67_1 = "1011";
+        String test67_2 = "011";
+        System.out.println(TwoNumbers.addBinary(test67_1, test67_2));
+
+        //leetcode34
+        int[] test34_1 = {2, 2};
+        int test34_2 = 3;
+        System.out.println(Arrays.toString((BinarySearch.searchRange(test34_1, test34_2))));
+
+        //leetcode 104
+        String test104 = "[3,9,20,null,null,15,7]";
+        TreeNode root104 = TreeNode.mkTree(test104);
+        System.out.println(BinaryTreeProblems.maxDepthBFSNonrecursion(root104));
+
+        //leetcode 17
+        letterCombinations test17 = new letterCombinations();
+        System.out.println(test17.letterCombination(""));
+
     }
 
 

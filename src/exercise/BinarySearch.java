@@ -60,5 +60,36 @@ public class BinarySearch {
         ans[1] = binarySearhRightBound(nums, target);
         return ans;
     }
+
+    //leetcode 33 搜索旋转排序数组
+    //example  45678 012
+
+    /**
+     * (1) nums[0]<=target<=nums[mid] (0,mid)不包含旋转  移动右端
+     * (2) target<=nums[mid]<mid[0](0,mid)包含旋转   移动右端
+     * (3) nums[mid]<mid[0]<=target (0,mid)包含旋转  移动右端
+     * 其余情况均为移动左端
+     * nums[0]<=target<=nums[mid]
+     * target<=nums[mid]<nums[0]
+     * nums[mid]<nums[0]<=target
+     * 综上条件可得 nums[0]<=target 与 target<=nums[mid] 与 nums[mid]<nums[0] 三者满足其一为真或者全为真,需移动左端
+     */
+    public static int seachTwistOrderedArray(int[] nums, int target) {
+        if (nums == null && nums.length == 0) return -1;
+        int start = 0;
+        int end = nums.length - 1;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            }
+            if (nums[0] <= target ^ target <= nums[mid] ^ nums[mid] < nums[0]) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return -1;
+    }
 }
 

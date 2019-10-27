@@ -68,11 +68,43 @@ public class Main {
         //leetcode 104
         String test104 = "[3,9,20,null,null,15,7]";
         TreeNode root104 = TreeNode.mkTree(test104);
-        System.out.println(BinaryTreeProblems.maxDepthBFSNonrecursion(root104));
+        System.out.println("leetcode 104 BFS:" + BinaryTreeProblems.maxDepthBFSNonrecursion(root104));
+        System.out.println("leetcode 104 DFS:" + BinaryTreeProblems.maxDepthDFSNonrecursion(root104));
 
         //leetcode 17
         letterCombinations test17 = new letterCombinations();
         System.out.println(test17.letterCombination(""));
+
+        //leetcode 136
+        int[] test136 = {2, 2, 1};
+        System.out.println(singleNumber.singleNumberXOR((test136)));
+
+        //leetcode 111
+        String test111 = "[1,2]";
+        TreeNode root111 = TreeNode.mkTree(test111);
+        System.out.println(BinaryTreeProblems.minDepthBFSNonrecursion(root111));
+
+        //leetcode33
+        int[] test34_nums = {4, 5, 6, 7, 0, 1, 2};
+        int test34_target = 0;
+        System.out.println("leetcode33: " + BinarySearch.seachTwistOrderedArray(test34_nums, test34_target));
+
+        //leetcode19
+        int[] test19_nums = {1, 2};
+        ListNode leetcode19_list = ListNode.arrayToListNode(test19_nums);
+        System.out.println("leetcode19: " + LinklistProblems.removeNthFromEnd(leetcode19_list, 1));
+
+        //leetcode 112
+        String test112 = "[5,4,8,11,null,13,4,7,2,null,null,null,1]";
+        TreeNode root112 = TreeNode.mkTree(test112);
+        System.out.println("leetcode112: " + BinaryTreeProblems.hasPathSumNonRecursion(root112, 22));
+
+
+        //leetcode 249
+        int[] test249_nums1 = {1, 2, 2, 1};
+        int[] test249_nums2 = {2, 2};
+        System.out.println("leetcode249: " + Arrays.toString(ArrayProblems.intersection(test249_nums1, test249_nums2)));
+
 
     }
 
